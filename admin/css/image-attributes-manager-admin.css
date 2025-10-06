@@ -1,0 +1,119 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+ /* Bulk Alt Tags Styles */
+.bulk-alt-options {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.bulk-alt-options h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.bulk-alt-options .button {
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+#bulk-alt-input {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#bulk-alt-input label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+#bulk-alt-input .regular-text {
+    width: 300px;
+    margin-right: 10px;
+}
+
+.wp-list-table th,
+.wp-list-table td {
+    vertical-align: middle;
+}
+
+.wp-list-table .alt-input {
+    width: 100%;
+    max-width: 300px;
+}
+
+.wp-list-table img {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 782px) {
+    .bulk-alt-options .button {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    #bulk-alt-input .regular-text {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .wp-list-table .alt-input {
+        max-width: none;
+    }
+}
+
+/* Loading states */
+.bulk-alt-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.bulk-alt-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #0073aa;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Success/Error messages */
+.bulk-alt-message {
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+.bulk-alt-message.success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.bulk-alt-message.error {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
